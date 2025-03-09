@@ -3,12 +3,18 @@ const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
 
 const getUserData = async () => {
 	const { data } = await githubApi.get(`/users/${GITHUB_USERNAME}`);
+	const repoData = await githubApi.get(`/users/${GITHUB_USERNAME}/repos`);
 	return {
 		username: data.login,
 		followers: data.followers,
 		following: data.following,
 		public_repos: data.public_repos,
-		repos_url: data.repos_url,
+		repositories: repoData.data.map((repo) => ({
+			name: repo.name,
+			url: repo.html_url,
+			description: repo.description,
+			language: repo.language,
+		})),
 	};
 };
 
@@ -17,6 +23,7 @@ const getRepoData = async (repoName) => {
 	return {
 		name: data.name,
 		description: data.description,
+		language: data.language,
 		stars: data.stargazers_count,
 		forks: data.forks_count,
 		url: data.html_url,
