@@ -77,7 +77,7 @@ Response:
 }
 ```
 ## Deployment
-The API is deployed online at: [https://github-api-integration.onrender.com/github]
+The API is deployed online at: [https://github-api-integration-usky.onrender.com]
 
 ## License
 This project is licensed under the MIT License.
