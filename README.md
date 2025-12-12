@@ -4,8 +4,8 @@ This project is a REST API that integrates with the **GitHub API** to fetch user
 
 ## Features
 
-- **GET /github** → Fetch GitHub profile details (followers, following, repositories, etc.).
-- **GET /github/{repo-name}** → Fetch details of a specific repository.
+- **GET /github** → Fetch GitHub profile details (followers, following, repositories, etc.). ### 🔗 [**Live Demo**](https://github-api-integration-usky.onrender.com/github)
+- **GET /github/{repo-name}** → Fetch details of a specific repository.### 🔗 [**Live Demo**](https://github-api-integration-usky.onrender.com/github/Github_Api_Integration)
 - **POST /github/{repo-name}/issues** → Create a new issue in a repository.
 
 ## Technologies Used
